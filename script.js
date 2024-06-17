@@ -53,6 +53,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal=" ";
 
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
@@ -65,8 +66,16 @@ function mostroAlternativa(){
     for(const alternativa of perguntasAtual.alternativas){
         const botaoAlternativas = document.createElement("button")
         botaoAlternativas.textContent(botaoAlternativas);
+        botaoAlternativas.addEventListener("click",()=> respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 mostraAlternativas();
+    function respostaSElecionada(opcaoSelecionada){
+        cost afirmacoes = opcaoSelecionada.afirmacoes;
+        historiaFinal = afirmacoes;
+        atual++;
+        mostraPergunta;
+    }
+    
 mostraPergunta();
