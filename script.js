@@ -6,14 +6,14 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Qual sua opinião sobre o chat gpt: [
+        enunciado: "Qual sua opinião sobre o chat gpt",
             alternativa:[
     {
             texto: "Isso é assustador!",
             afirmacao:"afirmacao"
     },
     {
-        texto: "nao"
+        texto: "horrivel"
             afirmacao:"afirmacao",
     },
     ]
@@ -23,10 +23,11 @@ const perguntas = [
                 texto: 
             "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
             afirmacao:"afirmacao"
-                },
-            {
-                "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-        ]
+                },  
+    {
+    "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+       }
+       ]
     },
     {
         enunciado: "Após a elaboração do trabalho, o professor realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
@@ -56,26 +57,34 @@ let perguntaAtual;
 let historiaFinal=" ";
 
 function mostraPergunta() {
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-
-
-
-
-function mostroAlternativa(){
-    for(const alternativa of perguntasAtual.alternativas){
-        const botaoAlternativas = document.createElement("button")
-        botaoAlternativas.textContent(botaoAlternativas);
-        botaoAlternativas.addEventListener("click",()=> respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativas);
+    if(atual >= perguntas.length){
+    mostraResultado();
+        return;
+    }
+    perguntaAtual = pergunta[atual];
+    caixasPerguntas.textContent = pergunta.enunciado;
+    caixaAlternativas.textContext = "";
+    mostraAlternativas();
+}
+function mostraAlternativas () {
+    for(const alternativa of perguntaAltual.alternativas) {
+        const botaoAlternativas = document.creteElement("button");
+        botaoAlternativas.textContent = alternativas.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
     }
 }
-mostraAlternativas();
-    function respostaSElecionada(opcaoSelecionada){
-        cost afirmacoes = opcaoSelecionada.afirmacoes;
-        historiaFinal = afirmacoes;
-        atual++;
-        mostraPergunta;
-    }
-    
+function respostaSelecionada(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmcao
+    historiFinal += afirmacoes + " ";
+    atual++;
+    mostraPergunta();
+}
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "Esse texto e a introducao para juntar todas as afirmacoes das respostas..."
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent ="";
+}
+
 mostraPergunta();
+
