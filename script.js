@@ -10,22 +10,19 @@ const perguntas = [
             alternativa:[
     {
             texto: "Isso é assustador!",
-            afirmacao:"afirmacao"
+            afirmacao:"porque e uma tecnologia muito avancada"
     },
     {
-        texto: "horrivel"
-            afirmacao:"afirmacao",
+        texto: "muito util"
+            afirmacao:"pois ajuda com respostas rapidas e eficazes",
     },
     ]
-        enunciado: "Com a descoberta desta tecnologia (IA), o professor decidiu fazer uma sequência de aulas sobre esta ela. No fim de uma aule ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "Voce acha que a IA(inteligencia artificial) foi algo bom implantado na sociedade"
         alternativas: [
             {
-                texto: 
-            "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-            afirmacao:"afirmacao"
+                texto: "foi um avanco, nao perdemos tempo buscando respostas",
+            afirmacao:"em parte,sim, ajudou o gasto de tmepo buscando respostas"
                 },  
-    {
-    "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
        }
        ]
     },
