@@ -17,7 +17,7 @@ const perguntas = [
             afirmacao:"pois ajuda com respostas rapidas e eficazes",
     },
     ]
-        enunciado: "Voce acha que a IA(inteligencia artificial) foi algo bom implantado na sociedade"
+        enunciado: "Voce acha que a IA(inteligencia artificial) foi algo bom implantado na sociedade",
         alternativas: [
             {
                 texto: "foi um avanco, nao perdemos tempo buscando respostas",
