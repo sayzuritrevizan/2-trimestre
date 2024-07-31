@@ -18,13 +18,14 @@ const perguntas = [
     },
     ]
     },
+    {
         enunciado: "Voce acha que a IA(inteligencia artificial) foi algo bom implantado na sociedade",
         alternativas: [
             {
                 texto: "foi um avanco, nao perdemos tempo buscando respostas",
             afirmacao:"em parte,sim, ajudou o gasto de tmepo buscando respostas"
                 },  
-       }
+            {
        ]
     },
     {
