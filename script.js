@@ -13,7 +13,7 @@ const perguntas = [
             afirmacao:"porque e uma tecnologia muito avancada"
     },
     {
-        texto: "muito util"
+        texto: "muito util",
             afirmacao:"pois ajuda com respostas rapidas e eficazes",
     },
     ]
